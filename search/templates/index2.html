@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Enter tweet you want to search</title>
+</head>
+<form action="/transfer/" method="post">
+    {% csrf_token %}
+    <label for="team_name">Enter Your Tweet: </label>
+    <input id="team_name" type="text" name="name_field" value="Cricket">
+    <input type="submit" value="OK">
+</form>
+</html>

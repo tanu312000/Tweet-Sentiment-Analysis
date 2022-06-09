@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tweets Sentiments</title>
+</head>
+<body>
+{% csrf_token %}
+
+{% if latest_question_list %}
+<table border="1">
+        <th>Tweet</th>
+        <th>Score</th>
+    {% for key,value in latest_question_list.items %}
+    <tr><td>{{ key }}</td><td>{{ value }}</td></tr>
+    {% endfor %}
+
+{% else %}
+    <p>Not able to find tweet</p>
+{% endif %}
+</table>
+</body>
+</html>
